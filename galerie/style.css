@@ -1,0 +1,94 @@
+
+/* STYLE DES ELEMENTS */
+
+.photo {
+    background-color: blue;
+    color: white;
+    min-height: 100px;
+    text-align: center;
+}
+
+/* ETAPE 1 : 3 colonnes égales */
+
+/*
+.galerie {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+*/
+
+/* ETAPE 2 : Avec repeat() */
+
+/*
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+*/
+
+/* ETAPE 2 : Proportions 1, 2 et 1 */
+
+/*
+.galerie {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+}
+*/
+
+/* ETAPE 3 : L'élément 1 occupe 2 colonnes et 2 rangées */
+
+/*
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.p1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+*/
+
+
+/* ETAPE 4 : L'élément 9 occupe toute la largeur */
+
+/*
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.p9 {
+    grid-column: 1 / -1;
+}
+*/
+
+/* ETAPE 5 : Toutes les rangées font 120px */
+
+/*
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 120px;
+    gap: 10px;
+}
+
+.p9 {
+    grid-column: 1 / -1;
+}
+*/
+
+
+/* ETAPE 6 : Grille responsive */
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-auto-rows: 120px;
+    gap: 10px;
+}

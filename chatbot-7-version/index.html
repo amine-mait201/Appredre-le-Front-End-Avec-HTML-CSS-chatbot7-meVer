@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="entete">
+        <img class="avatar" src="avatar.svg" alt="Avatar">
+        <div class="identite">
+            <h1>DRagon Chatbot</h1>
+            <p class="statut">En ligne</p>
+        </div>
+    </header>
+
+    <nav class="historique">
+        <h2>Historique</h2>
+        <ul>
+            <li><a href="#">Conversation 1</a></li>
+            <li><a href="#">Conversation 2</a></li>
+            <li><a href="#">Conversation 3</a></li>
+            <li><a href="#">Conversation 4</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONVERSATION -->
+    <main class="chatbot">
+
+        <section class="messages">
+            <p class="bulle bot">Bonjour ! Comment puis-je vous aider ?</p>
+            <p class="bulle utilisateur">Je veux apprendre le HTML.</p>
+            <p class="bulle bot">Très bien ! Commençons ensemble.</p>
+        </section>
+
+        <section class="capacites">
+            <h2>Mes capacités</h2>
+            <ul class="liste-capacites">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <form class="formulaire-message">
+            <label for="message">Votre message :</label>
+            <input type="text" id="message" placeholder="Écrivez ici...">
+            <button type="button">Envoyer</button>
+        </form>
+
+        <form class="formulaire-note">
+            <fieldset>
+                <legend>Notez notre chatbot</legend>
+                <div class="notes">
+                    <label><input type="radio" name="note" value="1"> 1</label>
+                    <label><input type="radio" name="note" value="2"> 2</label>
+                    <label><input type="radio" name="note" value="3"> 3</label>
+                    <label><input type="radio" name="note" value="4"> 4</label>
+                    <label><input type="radio" name="note" value="5"> 5</label>
+                </div>
+            </fieldset>
+        </form>
+
+    </main>
+
+    <aside>
+        <h2>Informations</h2>
+        <p>Assistant intelligent disponible 24h/24.</p>
+    </aside>
+
+  
+    <footer>
+        <p>2026 Dragon Chatbot</p>
+    </footer>
+
+</body>
+</html>

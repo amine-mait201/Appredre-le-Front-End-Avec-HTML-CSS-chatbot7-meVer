@@ -1,0 +1,125 @@
+
+/* 1. STYLE GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* STYLE DES ZONES */
+
+.entete, .menu, .contenu, .pied,
+.carte, .graphique, .recents {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* 2. MOBILE FIRST */
+
+.tableau {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "entete"
+        "menu"
+        "contenu"
+        "pied";
+    gap: 10px;
+}
+
+.entete {
+    grid-area: entete;
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenu {
+    grid-area: contenu;
+}
+
+.pied {
+    grid-area: pied;
+}
+
+
+/* 3. INDICATEURS */
+
+.indicateurs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.graphique {
+    min-height: 250px;
+    margin-top: 10px;
+}
+
+.recents {
+    margin-top: 10px;
+}
+
+
+/* 4. TABLETTE : 768px */
+
+@media (min-width: 768px) {
+
+    .tableau {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "entete entete"
+            "menu contenu"
+            "pied pied";
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+}
+
+
+/* 5. ORDINATEUR : 1024px */
+
+@media (min-width: 1024px) {
+
+    .indicateurs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contenu {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+    }
+
+    .indicateurs {
+        grid-column: 1 / -1;
+    }
+
+    .graphique {
+        margin-top: 0;
+    }
+
+    .recents {
+        margin-top: 0;
+    }
+
+}

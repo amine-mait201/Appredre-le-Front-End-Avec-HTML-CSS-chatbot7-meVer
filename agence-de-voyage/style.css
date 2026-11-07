@@ -1,0 +1,90 @@
+
+/* STYLE GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+}
+
+
+/* PAGE PRINCIPALE */
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "entete"
+        "contenu"
+        "pied";
+    gap: 10px;
+}
+
+
+/* NOMMER LES ZONES */
+
+.page header {
+    grid-area: entete;
+}
+
+.page main {
+    grid-area: contenu;
+}
+
+.page footer {
+    grid-area: pied;
+}
+
+
+/* STYLE DES ZONES */
+
+header, main, footer {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* OFFRES */
+
+.offres {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.carte {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.carte img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* TABLETTE : 768px */
+
+@media (min-width: 768px) {
+
+    .offres {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ORDINATEUR : 1024px */
+
+@media (min-width: 1024px) {
+
+    .offres {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
